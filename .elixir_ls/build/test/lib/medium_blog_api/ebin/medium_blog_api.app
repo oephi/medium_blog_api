@@ -4,6 +4,8 @@
                              phoenix_ecto]},
               {description,"medium_blog_api"},
               {modules,['Elixir.MediumBlogApi',
+                        'Elixir.MediumBlogApi.Accounts',
+                        'Elixir.MediumBlogApi.Accounts.User',
                         'Elixir.MediumBlogApi.Application',
                         'Elixir.MediumBlogApi.DataCase',
                         'Elixir.MediumBlogApi.Repo','Elixir.MediumBlogApiWeb',
