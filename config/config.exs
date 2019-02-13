@@ -14,8 +14,7 @@ config :medium_blog_api, MediumBlogApiWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "tKapIzWqDnrJRupLTWTmk/KFtKyHggso1TX4iRbnSF68wwJpB1aH4ylE2Nx1Upr3",
   render_errors: [view: MediumBlogApiWeb.ErrorView, accepts: ~w(json)],
-  pubsub: [name: MediumBlogApi.PubSub,
-           adapter: Phoenix.PubSub.PG2]
+  pubsub: [name: MediumBlogApi.PubSub, adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
 config :logger, :console,
@@ -24,4 +23,4 @@ config :logger, :console,
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
-import_config "#{Mix.env}.exs"
+import_config "#{Mix.env()}.exs"
