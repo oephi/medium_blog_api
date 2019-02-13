@@ -11,7 +11,7 @@ defmodule MediumBlogApi.Application do
       # Start the Ecto repository
       supervisor(MediumBlogApi.Repo, []),
       # Start the endpoint when the application starts
-      supervisor(MediumBlogApiWeb.Endpoint, []),
+      supervisor(MediumBlogApiWeb.Endpoint, [])
       # Start your own worker by calling: MediumBlogApi.Worker.start_link(arg1, arg2, arg3)
       # worker(MediumBlogApi.Worker, [arg1, arg2, arg3]),
     ]
