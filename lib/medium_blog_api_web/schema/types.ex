@@ -1,4 +1,4 @@
-defmodule MediumGraphqlApiWeb.Schema.Types do
+defmodule MediumBlogApiWeb.Schema.Types do
   use Absinthe.Schema.Notation
 
   alias MediumBlogApiWeb.Schema.Types

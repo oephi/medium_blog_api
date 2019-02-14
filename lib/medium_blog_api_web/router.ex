@@ -8,10 +8,10 @@ defmodule MediumBlogApiWeb.Router do
   scope "/api" do
     pipe_through(:api)
 
-    forward("/graphql", Absinthe.Plug, schema: MediumGraphqlApiWeb.Schema)
+    forward("/graphql", Absinthe.Plug, schema: MediumBlogApiWeb.Schema)
 
     if Mix.env() == :dev do
-     forward("/graphiql", Absinthe.Plug.GraphiQL, schema: MediumGraphqlApiWeb.Schema)      
+     forward("/graphiql", Absinthe.Plug.GraphiQL, schema: MediumBlogApiWeb.Schema)      
     end
 
   end
