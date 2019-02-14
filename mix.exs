@@ -40,7 +40,10 @@ defmodule MediumBlogApi.Mixfile do
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
       {:argon2_elixir, "~> 2.0"},
-      {:ecto_sql, "~> 3.0-rc.1"}
+      {:ecto_sql, "~> 3.0-rc.1"},
+      {:absinthe, "~> 1.4.0"},
+      {:absinthe_plug, "~> 1.4.0"},
+      {:absinthe_ecto, "~> 0.1.3"}
     ]
   end
 
