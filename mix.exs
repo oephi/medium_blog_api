@@ -20,7 +20,7 @@ defmodule MediumBlogApi.Mixfile do
   def application do
     [
       mod: {MediumBlogApi.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :phoenix_ecto]
     ]
   end
 
@@ -35,10 +35,12 @@ defmodule MediumBlogApi.Mixfile do
     [
       {:phoenix, "~> 1.3.4"},
       {:phoenix_pubsub, "~> 1.0"},
-      {:phoenix_ecto, "~> 3.2"},
+      {:phoenix_ecto, "~> 4.0"},
       {:postgrex, ">= 0.0.0"},
       {:gettext, "~> 0.11"},
-      {:cowboy, "~> 1.0"}
+      {:cowboy, "~> 1.0"},
+      {:argon2_elixir, "~> 2.0"},
+      {:ecto_sql, "~> 3.0-rc.1"}
     ]
   end
 

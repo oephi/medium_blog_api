@@ -10,7 +10,7 @@ defmodule MediumBlogApi.Accounts.User do
     field(:last_name, :string)
     field(:password_hash, :string)
     field(:password, :string, virtual: true)
-    field(:password_confrmation, :string, virtual: true)
+    field(:password_confirmation, :string, virtual: true)
     field(:role, :string, default: "user")
 
     timestamps()
@@ -22,8 +22,7 @@ defmodule MediumBlogApi.Accounts.User do
     user
     # puts the attributes into the user struct
     |> cast(attrs, [:first_name, :last_name, :email, :password, :password_confirmation, :role])
-    # validates info
-    |> validate_required([:first_name, :last_name, :email, :password, :role])
+    |> validate_required([:first_name, :last_name, :email, :password, :password_confirmation, :role])
     |> validate_format(:email, ~r/@/)
     |> update_change(:email, &String.downcase(&1))
     |> validate_length(:password, min: 6, max: 100)
@@ -32,7 +31,12 @@ defmodule MediumBlogApi.Accounts.User do
     |> hash_password
   end
 
+  defp hash_password(%Ecto.Changeset{valid?: true, changes: %{password: password}} = changeset) do
+    change(changeset, Argon2.add_hash(password))
+  end
+
   defp hash_password(changeset) do
     changeset
   end
+
 end
