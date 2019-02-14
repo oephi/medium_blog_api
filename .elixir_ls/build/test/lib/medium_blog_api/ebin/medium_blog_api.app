@@ -18,7 +18,8 @@
                         'Elixir.MediumBlogApiWeb.Gettext',
                         'Elixir.MediumBlogApiWeb.Router',
                         'Elixir.MediumBlogApiWeb.Router.Helpers',
-                        'Elixir.MediumBlogApiWeb.UserSocket']},
+                        'Elixir.MediumBlogApiWeb.UserSocket',
+                        'Elixir.MediumGraphqlApiWeb.Schema']},
               {registered,[]},
               {vsn,"0.0.1"},
               {mod,{'Elixir.MediumBlogApi.Application',[]}}]}.
