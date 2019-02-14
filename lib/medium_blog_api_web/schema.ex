@@ -1,7 +1,8 @@
 defmodule MediumGraphqlApiWeb.Schema do
   use Absinthe.Schema
 
-  # import types
+  # import Types
+  import_types(MediumGraphqlApiWeb.Schema.Types)
 
   query do
   end
