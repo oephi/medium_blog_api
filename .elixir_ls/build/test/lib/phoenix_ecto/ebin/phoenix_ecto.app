@@ -12,6 +12,6 @@
                         'Elixir.Plug.Exception.Ecto.StaleEntryError',
                         'Elixir.Plug.Exception.Ecto.SubQueryError']},
               {registered,[]},
-              {vsn,"3.6.0"},
+              {vsn,"4.0.0"},
               {mod,{'Elixir.Phoenix.Ecto',[]}},
               {env,[{exclude_ecto_exceptions_from_plug,[]}]}]}.
