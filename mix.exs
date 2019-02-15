@@ -45,7 +45,8 @@ defmodule MediumBlogApi.Mixfile do
       {:absinthe_plug, "~> 1.4.0"},
       {:absinthe_ecto, "~> 0.1.3"},
       {:plug_cowboy, "~> 2.0"},
-      {:poison, "~> 3.1"}
+      {:poison, "~> 3.1"},
+      {:guardian, "~> 1.0"}
     ]
   end
 
